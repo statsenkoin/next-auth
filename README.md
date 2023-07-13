@@ -16,3 +16,6 @@ Add very basic nav
    - app/layout.js
    - components/providers.js
    - add Sign in/out btn to header -> user.js -> useSession()
+
+5. next.config -> image config
+6. add middleware.js
