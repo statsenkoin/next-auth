@@ -1,20 +1,13 @@
 import Link from 'next/link';
 import styles from '../app/page.module.css';
+import { Navigation } from './Navigation';
+import { User } from './User';
 
 const Header = () => {
   return (
     <header className={styles.headerContainer}>
-      <div>
-        <Link href="/" className={styles.links}>
-          Home
-        </Link>
-        <Link href="/about" className={styles.links}>
-          About
-        </Link>
-      </div>
-      <Link href="/profile" className={styles.links}>
-        Profile
-      </Link>
+      <Navigation />
+      <User />
     </header>
   );
 };
