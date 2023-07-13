@@ -26,7 +26,7 @@ export const User = () => {
           Sign Out
         </Link>
       ) : (
-        <Link href="/api/auth/signin" className={styles.links}>
+        <Link href="signin" className={styles.links}>
           Sign In
         </Link>
       )}
