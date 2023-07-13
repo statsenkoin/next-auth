@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function Profile() {
   const session = useSession();
   // const session = await getServerSession(authConfig);
-  console.log('session :>> ', session);
+  // console.log('session :>> ', session);
   return (
     <>
       <h1>Profile page</h1>
