@@ -1,12 +1,12 @@
 .main {
-  min-height: calc(100vh - 50px - 50px);
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
 
   text-align: center;
   padding-top: 50px;
 }
 
 .footerContainer {
-  height: 50px;
+  height: var(--footerHeight);
   padding: 15px;
   background-color: cadetblue;
   text-align: center;
@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  height: 50px;
+  height: var(--headerHeight);
   padding-inline: 300px;
 
   font-size: 20px;

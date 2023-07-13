@@ -73,6 +73,11 @@
   }
 } */
 
+:root {
+  --headerHeight: 50px;
+  --footerHeight: 50px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
