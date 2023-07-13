@@ -19,3 +19,7 @@ Add very basic nav
 
 5. next.config -> image config
 6. add middleware.js
+
+`03-credentials-provider`
+
+config/auth.js -> add CredentialsProvider
