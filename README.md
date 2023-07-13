@@ -23,3 +23,13 @@ Add very basic nav
 `03-credentials-provider`
 
 config/auth.js -> add CredentialsProvider
+
+`04-custom-login-form`
+
+- Custom components/GoogleButton.js
+- Custom components/SignInForm.js
+- Custom components/RegisterForm.js
+- app/signin/page.js
+- app/register/page.js
+- components/User update Link api/auth/signin -> /signin
+- config/auth - add pages{}
