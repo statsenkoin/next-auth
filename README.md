@@ -37,4 +37,7 @@ config/auth.js -> add CredentialsProvider
 `05-mongodb-register`
 
 - import mongoose, bcryptjs, axios
--
+- create mongoDB config: configs/dbConfig, .env
+- create userModel
+- create route api/users/signup
+- add logic to RegisterForm
