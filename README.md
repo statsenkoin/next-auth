@@ -33,3 +33,8 @@ config/auth.js -> add CredentialsProvider
 - app/register/page.js
 - components/User update Link api/auth/signin -> /signin
 - config/auth - add pages{}
+
+`05-mongodb-register`
+
+- import mongoose, bcryptjs, axios
+-
