@@ -1,36 +1,38 @@
 'use client';
 
-// import { signIn } from 'next-auth/react';
-// import { useRouter } from 'next/navigation';
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
 import styles from '../app/page.module.css';
+import axios from 'axios';
 
 const RegisterForm = () => {
-  // const router = useRouter();
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    // const res = await signIn('credentials', {
-    //   email: formData.get('email'),
-    //   password: formData.get('password'),
-    //   redirect: false,
-    // });
-
-    // if (res && !res.error) {
-    //   console.log('res+ :>> ', res);
-    //   router.push('/');
-    // } else {
-    //   console.log('res- :>> ', res);
-    // }
 
     const user = {
       name: formData.get('name'),
       email: formData.get('email'),
       password: formData.get('password'),
     };
+
     console.log('user :>> ', user);
+
+    try {
+      setLoading(true);
+      const response = await axios.post('/api/users/signup', user);
+      console.log('Signup success', response.data);
+      router.push('/signin');
+    } catch (error) {
+      console.log('Signup failed', error.message);
+      console.log('Signup failed: ', error.response.data.error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,7 +59,7 @@ const RegisterForm = () => {
         className={styles.input}
       />
       <button type="submit" className={styles.loginButton}>
-        Register
+        {loading ? 'Processing...' : 'Register'}
       </button>
     </form>
   );
