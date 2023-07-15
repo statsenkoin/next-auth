@@ -30,6 +30,7 @@ const RegisterForm = () => {
     } catch (error) {
       console.log('Signup failed', error.message);
       console.log('Signup failed: ', error.response.data.error);
+      window.alert(error.response.data.error);
     } finally {
       setLoading(false);
     }

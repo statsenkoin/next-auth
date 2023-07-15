@@ -41,3 +41,9 @@ config/auth.js -> add CredentialsProvider
 - create userModel
 - create route api/users/signup
 - add logic to RegisterForm
+
+`06-jwt-session`
+
+- import jsonwebtoken
+- add users/login/route.js
+- update authConfig for credentials
